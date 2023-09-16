@@ -29,15 +29,24 @@ public class B_LCM {
     }
 
     static int lcm(int a, int b) {
-        return a * b / gcd(a, b);
+        return a * b / gcd2(a, b);
     }
 
-    static int gcd(int a, int b) {
+    static int gcd1(int a, int b) {
         while (a != b) {
             if (a > b) a -=b;
             else b -=a;
         }
 
         return a;
+    }
+
+    static int gcd2(int a, int b) {
+        while (a != 0 && b != 0) {
+            if (a > b) a %=b;
+            else b %=a;
+        }
+
+        return a + b;
     }
 }
