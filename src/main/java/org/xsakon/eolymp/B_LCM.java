@@ -22,8 +22,8 @@ public class B_LCM {
     static int lcmOfMultipleNumbers(int[] arr) {
         int lcm = arr[0];
 
-        for (int i = 0; i < arr.length; i++) {
-            lcm = lcm(lcm, arr[i]);
+        for (int n : arr) {
+            lcm = lcm(lcm, n);
         }
         return lcm;
     }
