@@ -8,6 +8,7 @@ public class A_MirrorPrimeNumbers {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         System.out.println(countMirrorPrimeNumbers(a, b));
+        scanner.close();
     }
 
     static int countMirrorPrimeNumbers(int a, int b) {
