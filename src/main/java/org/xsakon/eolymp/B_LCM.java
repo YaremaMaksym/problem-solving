@@ -17,6 +17,7 @@ public class B_LCM {
         }
 
         System.out.println(lcmOfMultipleNumbers(arr));
+        in.close();
     }
 
     static int lcmOfMultipleNumbers(int[] arr) {
@@ -49,4 +50,5 @@ public class B_LCM {
 
         return a + b;
     }
+
 }
