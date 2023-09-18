@@ -18,6 +18,7 @@ import java.io.InputStreamReader;
 public class I_PartialSumOfMatrix {
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         String[] s = in.readLine().split(" ");
         int n = Integer.parseInt(s[0]);
         int m = Integer.parseInt(s[1]);
@@ -32,18 +33,17 @@ public class I_PartialSumOfMatrix {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                if (i == 0 && j == 0) ;
+                if (i == 0 && j == 0) ; // this element stays the same
                 else if (i == 0) matrix[i][j] += matrix[i][j - 1];
                 else if (j == 0) matrix[i][j] += matrix[i - 1][j];
                 else matrix[i][j] += matrix[i][j - 1] + matrix[i - 1][j] - matrix[i - 1][j - 1];
+
+                sb.append(matrix[i][j]).append(" ");
             }
+            sb.append("\n");
         }
 
-        for (int[] arr: matrix) {
-            for (int number : arr) {
-                System.out.print(number + " ");
-            }
-            System.out.println();
-        }
+        System.out.println(sb);
+        in.close();
     }
 }
