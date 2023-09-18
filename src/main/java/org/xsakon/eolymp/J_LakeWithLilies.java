@@ -9,5 +9,6 @@ public class J_LakeWithLilies {
         int n = in.nextInt();
 
         System.out.println(n - 1);
+        in.close();
     }
 }

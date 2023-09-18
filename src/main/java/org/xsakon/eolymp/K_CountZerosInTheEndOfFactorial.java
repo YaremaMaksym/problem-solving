@@ -22,5 +22,6 @@ public class K_CountZerosInTheEndOfFactorial {
         }
 
         System.out.println(count);
+        in.close();
     }
 }
