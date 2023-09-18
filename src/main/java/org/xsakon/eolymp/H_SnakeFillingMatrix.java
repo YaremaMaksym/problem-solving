@@ -1,12 +1,13 @@
 package org.xsakon.eolymp;
 
-import java.io.BufferedReader;
 import java.util.Scanner;
 
 public class H_SnakeFillingMatrix {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
+
+        StringBuilder strOut = new StringBuilder();
 
         int[][] matrix = new int[n][n];
         int count = 0;
@@ -27,10 +28,12 @@ public class H_SnakeFillingMatrix {
 
         for (int[] arr : matrix) {
             for (int number : arr) {
-                System.out.print(number + " ");
+                strOut.append(number).append(" ");
             }
-            System.out.println();
+            strOut.append("\n");
         }
+
+        System.out.println(strOut);
 
         in.close();
     }
