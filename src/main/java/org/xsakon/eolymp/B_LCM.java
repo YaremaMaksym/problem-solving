@@ -17,32 +17,22 @@ public class B_LCM {
         }
 
         System.out.println(lcmOfMultipleNumbers(arr));
-        in.close();
     }
 
-    static int lcmOfMultipleNumbers(int[] arr) {
-        int lcm = arr[0];
+    static long lcmOfMultipleNumbers(int[] arr) {
+        long lcm = arr[0];
 
-        for (int n : arr) {
-            lcm = lcm(lcm, n);
+        for (int i = 0; i < arr.length; i++) {
+            lcm = lcm(lcm, arr[i]);
         }
         return lcm;
     }
 
-    static int lcm(int a, int b) {
-        return a * b / gcd2(a, b);
+    static long lcm(long a, long b) {
+        return a * b / gcd(a, b);
     }
 
-    static int gcd1(int a, int b) {
-        while (a != b) {
-            if (a > b) a -=b;
-            else b -=a;
-        }
-
-        return a;
-    }
-
-    static int gcd2(int a, int b) {
+    static long gcd(long a, long b) {
         while (a != 0 && b != 0) {
             if (a > b) a %=b;
             else b %=a;
@@ -50,5 +40,4 @@ public class B_LCM {
 
         return a + b;
     }
-
 }
