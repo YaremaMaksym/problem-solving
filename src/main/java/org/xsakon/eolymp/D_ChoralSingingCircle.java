@@ -1,26 +1,28 @@
 package org.xsakon.eolymp;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class D_ChoralSingingCircle {
     public static void main(String[] args) throws IOException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder out = new StringBuilder();
-        String[] s = in.readLine().split(" ");
+        Scanner in = new Scanner(System.in);
 
-        while (s.length > 1) {
-            int n = Integer.parseInt(s[0]);
-            int m = Integer.parseInt(s[1]);
+        while (in.hasNextInt()) {
+            int n = in.nextInt();
+            int m = in.nextInt();
 
-            if (m == 1) out.append("YES\n");
-            else out.append("NO\n");
-
-            s = in.readLine().split(" ");
+            if (gcd(n, m) == 1) System.out.println("YES");
+            else System.out.println("NO");
         }
 
-        System.out.println(out);
         in.close();
+    }
+
+    static int gcd(int a, int b) {
+        while (a != 0 && b != 0) {
+            if (a > b) a %= b;
+            else b %= a;
+        }
+        return a + b;
     }
 }
