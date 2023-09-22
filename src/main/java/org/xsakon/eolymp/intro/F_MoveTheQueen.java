@@ -1,4 +1,4 @@
-package org.xsakon.eolymp;
+package org.xsakon.eolymp.intro;
 // 3 1 6 1 7 4 8 3 5 1 1 1 1 1 1 1 1 2 4 6 8 3 2 7 5
 // 171
 

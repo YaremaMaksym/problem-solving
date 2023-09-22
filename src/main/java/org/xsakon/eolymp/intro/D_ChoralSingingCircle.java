@@ -1,4 +1,4 @@
-package org.xsakon.eolymp;
+package org.xsakon.eolymp.intro;
 
 import java.io.IOException;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package org.xsakon.eolymp;
+package org.xsakon.eolymp.intro;
 
 /*
 3
